@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "07:00"
+    versioning-strategy: auto
+    # Allow up to 10 open pull requests for updates to dependency versions
+    open-pull-requests-limit: 10
+    labels:
+      - "part:tooling"
+    reviewers:
+      - daniel-zullo-frequenz
+      # - "frequenz-floss/python-sdk-team"
