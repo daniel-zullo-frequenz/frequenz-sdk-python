@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "05:00"
+    # Default versioning-strategy. For other versioning-strategy see:
+    # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#versioning-strategy
+    versioning-strategy: auto
+    # Allow up to 10 open pull requests for updates to dependency versions
+    open-pull-requests-limit: 10
+    labels:
+      - "part:tooling"
+      - "type:tech-debt"
+    reviewers:
+      - "frequenz-floss/python-sdk-team"
