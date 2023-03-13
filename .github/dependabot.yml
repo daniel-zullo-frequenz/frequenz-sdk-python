@@ -4,7 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    update:
+    allow:
       - dependency-name: "async-solipsism"
       - dependency-name: "black"
       - dependency-name: "darglint"
