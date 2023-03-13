@@ -1,0 +1,29 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "daily"
+    update:
+      - dependency-name: "async-solipsism"
+      - dependency-name: "black"
+      - dependency-name: "darglint"
+      - dependency-name: "grpc-stubs"
+      - dependency-name: "isort"
+      - dependency-name: "mypy"
+      - dependency-name: "nox"
+      - dependency-name: "pandas-stubs"
+      - dependency-name: "pydocstyle"
+      - dependency-name: "pylint"
+      - dependency-name: "pytest"
+      - dependency-name: "pytest-asyncio"
+      - dependency-name: "pytest-cov"
+      - dependency-name: "pytest-mock"
+      - dependency-name: "time-machine"
+      - dependency-name: "toml"
+      - dependency-name: "tomli"
