@@ -4,22 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "03:00"
-    allow:
-      - dependency-name: "async-solipsism"
-      - dependency-name: "black"
-      - dependency-name: "darglint"
-      - dependency-name: "grpc-stubs"
-      - dependency-name: "isort"
-      - dependency-name: "mypy"
-      - dependency-name: "nox"
-      - dependency-name: "pandas-stubs"
-      - dependency-name: "pydocstyle"
-      - dependency-name: "pylint"
-      - dependency-name: "pytest"
-      - dependency-name: "pytest-asyncio"
-      - dependency-name: "pytest-cov"
-      - dependency-name: "pytest-mock"
-      - dependency-name: "time-machine"
-      - dependency-name: "toml"
-      - dependency-name: "tomli"
+      time: "07:00"
+    labels:
+      - "part:tooling"
+    reviewers:
+      - daniel-zullo-frequenz
+      # - "frequenz-floss/python-sdk-team"
