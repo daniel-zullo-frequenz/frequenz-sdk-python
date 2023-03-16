@@ -13,3 +13,11 @@ updates:
     reviewers:
       - daniel-zullo-frequenz
       # - "frequenz-floss/python-sdk-team"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "part:tooling"
+    reviewers:
+      - daniel-zullo-frequenz
