@@ -1,15 +1,5 @@
 version: 2
 
-# Support two branches for security updates excluding default branch
-supported_branches:
-  - "v0.16.x"
-  - "v0.17.x"
-
-# Define common properties for all updates
-
-
-# Define security properties
-
 updates:
   - package-ecosystem: "pip"
     directory: "/"
@@ -20,7 +10,8 @@ updates:
       - "part:tooling"
       - "type:tech-debt"
     reviewers:
-      - "frequenz-floss/python-sdk-team"
+      # - "frequenz-floss/python-sdk-team"
+      - "daniel-zullo-frequenz"
     # Default versioning-strategy. For other versioning-strategy see:
     # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#versioning-strategy
     versioning-strategy: auto
@@ -36,7 +27,8 @@ updates:
       - "part:tooling"
       - "type:tech-debt"
     reviewers:
-      - "frequenz-floss/python-sdk-team"
+      # - "frequenz-floss/python-sdk-team"
+      - "daniel-zullo-frequenz"
 
 
   # Security updates for multiple target branches
@@ -50,7 +42,8 @@ updates:
       - "type:tech-debt"
       - "priority:URGENT"
     reviewers:
-      - "frequenz-floss/python-sdk-team"
+      # - "frequenz-floss/python-sdk-team"
+      - "daniel-zullo-frequenz"
     open-pull-requests-limit: 0 # Disable version updates
     target-branch: "v0.16.x"
 
@@ -62,6 +55,9 @@ updates:
       - "part:tooling"
       - "type:tech-debt"
       - "priority:URGENT"
+    reviewers:
+      # - "frequenz-floss/python-sdk-team"
+      - "daniel-zullo-frequenz"
     open-pull-requests-limit: 0 # Disable version updates
     target-branch: "v0.16.x"
 
@@ -73,6 +69,9 @@ updates:
       - "part:tooling"
       - "type:tech-debt"
       - "priority:URGENT"
+    reviewers:
+      # - "frequenz-floss/python-sdk-team"
+      - "daniel-zullo-frequenz"
     open-pull-requests-limit: 0 # Disable version updates
     target-branch: "v0.17.x"
 
@@ -84,5 +83,8 @@ updates:
       - "part:tooling"
       - "type:tech-debt"
       - "priority:URGENT"
+    reviewers:
+      # - "frequenz-floss/python-sdk-team"
+      - "daniel-zullo-frequenz"
     open-pull-requests-limit: 0 # Disable version updates
     target-branch: "v0.17.x"
