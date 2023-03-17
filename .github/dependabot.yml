@@ -40,16 +40,16 @@ updates:
 
   - <<: *security_updates
     package-ecosystem: "pip"
-    target-branch: *supported_branches[0]
+    target-branch: "v0.16.x"
 
   - <<: *security_updates
     package-ecosystem: "github-actions"
-    target-branch: *supported_branches[0]
+    target-branch: "v0.16.x"
 
   - <<: *security_updates
     package-ecosystem: "pip"
-    target-branch: *supported_branches[1]
+    target-branch: "v0.17.x"
 
   - <<: *security_updates
     package-ecosystem: "github-actions"
-    target-branch: *supported_branches[1]
+    target-branch: "v0.17.x"
