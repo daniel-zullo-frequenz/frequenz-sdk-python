@@ -1,56 +1,55 @@
 version: 2
+
+# Support two branches for security updates excluding default branch
+supported_branches:
+  - "v0.16.x"
+  - "v0.17.x"
+
+# Define common properties for all updates
+common_properties: &common_properties
+  directory: "/"
+  schedule:
+    interval: "daily"
+    time: "07:00"
+  labels:
+    - "part:tooling"
+    - "type:tech-debt"
+  reviewers:
+    - "frequenz-floss/python-sdk-team"
+
+# Define security properties
+security_updates: &security_updates
+  <<: *common_properties
+  labels:
+    - "priority:URGENT"
+  open-pull-requests-limit: 0 # Disable version updates
+
 updates:
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "daily"
-      time: "05:00"
+  - <<: *common_properties
+    package-ecosystem: "pip"
     # Default versioning-strategy. For other versioning-strategy see:
     # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#versioning-strategy
     versioning-strategy: auto
     # Allow up to 10 open pull requests for updates to dependency versions
     open-pull-requests-limit: 10
-    labels:
-      - "part:tooling"
-      - "type:tech-debt"
-    reviewers:
-      - "frequenz-floss/python-sdk-team"
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
-      time: "07:00"
-    labels:
-      - "part:tooling"
-      - "type:tech-debt"
-    reviewers:
-      - "frequenz-floss/python-sdk-team"
+  - <<: *common_properties
+    package-ecosystem: "github-actions"
 
-# Security updates only
+  # Security updates for multiple target branches
 
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0 # Disable version updates
-    target-branch: "v0.16.x"
-    labels:
-      - "part:tooling"
-      - "type:tech-debt"
-      - "priority:URGENT"
-    reviewers:
-      - "frequenz-floss/python-sdk-team"
+  - <<: *security_updates
+    package-ecosystem: "pip"
+    target-branch: *supported_branches[0]
 
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0 # Disable version updates
-    target-branch: "v0.17.x"
-    labels:
-      - "part:tooling"
-      - "type:tech-debt"
-      - "priority:URGENT"
-    reviewers:
-      - "frequenz-floss/python-sdk-team"
+  - <<: *security_updates
+    package-ecosystem: "github-actions"
+    target-branch: *supported_branches[0]
+
+  - <<: *security_updates
+    package-ecosystem: "pip"
+    target-branch: *supported_branches[1]
+
+  - <<: *security_updates
+    package-ecosystem: "github-actions"
+    target-branch: *supported_branches[1]
