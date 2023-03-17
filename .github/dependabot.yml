@@ -26,3 +26,57 @@ updates:
       - "type:tech-debt"
     reviewers:
       - "frequenz-floss/python-sdk-team"
+
+  # Security updates for supported branches
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "part:tooling"
+      - "type:tech-debt"
+      - "priority:URGENT"
+    reviewers:
+      - "frequenz-floss/python-sdk-team"
+    open-pull-requests-limit: 0 # Disable version updates
+    target-branch: "v0.16.x"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "part:tooling"
+      - "type:tech-debt"
+      - "priority:URGENT"
+    reviewers:
+      - "frequenz-floss/python-sdk-team"
+    open-pull-requests-limit: 0 # Disable version updates
+    target-branch: "v0.16.x"
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "part:tooling"
+      - "type:tech-debt"
+      - "priority:URGENT"
+    reviewers:
+      - "frequenz-floss/python-sdk-team"
+    open-pull-requests-limit: 0 # Disable version updates
+    target-branch: "v0.17.x"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "part:tooling"
+      - "type:tech-debt"
+      - "priority:URGENT"
+    reviewers:
+      - "frequenz-floss/python-sdk-team"
+    open-pull-requests-limit: 0 # Disable version updates
+    target-branch: "v0.17.x"
