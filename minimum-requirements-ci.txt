@@ -3,7 +3,7 @@ frequenz-api-microgrid==0.11.0
 frequenz-channels==0.11.0
 google-api-python-client==2.81.0
 grpcio==1.51.1
-grpcio-tools==1.51.1
+grpcio-tools==1.51.3
 networkx==2.8
 pandas==1.5.2
 protobuf==4.21.12
