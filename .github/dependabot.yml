@@ -44,7 +44,7 @@ updates:
     reviewers:
       # - "frequenz-floss/python-sdk-team"
       - "daniel-zullo-frequenz"
-    open-pull-requests-limit: 0 # Disable version updates
+    # open-pull-requests-limit: 0 # Disable version updates
     target-branch: "v0.16.x"
 
   - package-ecosystem: "github-actions"
@@ -58,7 +58,7 @@ updates:
     reviewers:
       # - "frequenz-floss/python-sdk-team"
       - "daniel-zullo-frequenz"
-    open-pull-requests-limit: 0 # Disable version updates
+    # open-pull-requests-limit: 0 # Disable version updates
     target-branch: "v0.16.x"
 
   - package-ecosystem: "pip"
@@ -72,7 +72,7 @@ updates:
     reviewers:
       # - "frequenz-floss/python-sdk-team"
       - "daniel-zullo-frequenz"
-    open-pull-requests-limit: 0 # Disable version updates
+    # open-pull-requests-limit: 0 # Disable version updates
     target-branch: "v0.17.x"
 
   - package-ecosystem: "github-actions"
@@ -86,5 +86,5 @@ updates:
     reviewers:
       # - "frequenz-floss/python-sdk-team"
       - "daniel-zullo-frequenz"
-    open-pull-requests-limit: 0 # Disable version updates
+    # open-pull-requests-limit: 0 # Disable version updates
     target-branch: "v0.17.x"
