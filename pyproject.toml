@@ -52,7 +52,7 @@ docs = [
     "mike >= 1.1.2, < 2",
     "mkdocs-gen-files >= 0.4.0, < 0.5.0",
     "mkdocs-literate-nav >= 0.4.0, < 0.7.0",
-    "mkdocs-material >= 8.5.7, < 9",
+    "mkdocs-material >= 8.5.7, < 10",
     "mkdocs-section-index >= 0.3.4, < 0.4.0",
     "mkdocstrings[python] >= 0.19.0, < 0.21.0",
 ]
