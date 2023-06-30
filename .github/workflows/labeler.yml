@@ -19,6 +19,6 @@ jobs:
     steps:
       - name: Labeler
         # Only use hashes, see the security comment above
-        uses: actions/labeler@ba790c862c380240c6d5e7427be5ace9a05c754b  # 4.0.3
+        uses: actions/labeler@0967ca812e7fdc8f5f71402a1b486d5bd061fe20  # 4.2.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
