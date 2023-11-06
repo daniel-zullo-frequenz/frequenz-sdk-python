@@ -57,7 +57,7 @@ dev-docstrings = [
 dev-examples = ["polars == 0.18.13"]
 dev-formatting = ["black == 23.7.0", "isort == 5.12.0"]
 dev-mkdocs = [
-  "mike == 1.1.2",
+  "mike == 2.0.0",
   "mkdocs-gen-files == 0.5.0",
   "mkdocs-literate-nav == 0.6.0",
   "mkdocs-material == 9.2.1",
