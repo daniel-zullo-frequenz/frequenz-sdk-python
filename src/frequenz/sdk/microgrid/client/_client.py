@@ -15,7 +15,7 @@ from frequenz.api.common import metrics_pb2 as metrics_pb
 from frequenz.api.microgrid import microgrid_pb2 as microgrid_pb
 from frequenz.api.microgrid.microgrid_pb2_grpc import MicrogridStub
 from frequenz.channels import Broadcast, Receiver, Sender
-from google.protobuf.empty_pb2 import Empty  # pylint: disable=no-name-in-module
+from google.protobuf import empty_pb2
 
 from ..._internal._constants import RECEIVER_MAX_SIZE
 from ..component import (
@@ -281,7 +281,7 @@ class MicrogridGrpcClient(MicrogridApiClient):
         microgrid_metadata: microgrid_pb.MicrogridMetadata | None = None
         try:
             microgrid_metadata = await self.api.GetMicrogridMetadata(
-                Empty(),
+                empty_pb2.Empty(),
                 timeout=int(DEFAULT_GRPC_CALL_TIMEOUT),
             )  # type: ignore[misc]
         except grpc.aio.AioRpcError:
